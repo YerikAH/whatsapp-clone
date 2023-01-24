@@ -1,16 +1,33 @@
-# whatsapp_clone
+# WhatsApp clone
+text
+## Development 
+### Project structure
+text
 
-A new Flutter project.
+### My experience developing
+text
 
-## Getting Started
+### Technologies used in the project
 
-This project is a starting point for a Flutter application.
+1. [Flutter](https://flutter.dev/)
+2. [Dart](https://dart.dev/)
 
-A few resources to get you started if this is your first Flutter project:
+## Demo 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+You can see the app running, just open the terminal and enter the following commands:
+```
+git clone link
+cd text
+flutter run
+```
+### Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="./assets/test.png" width="375" alt="app" />
+
+## Author
+
+- Harvey Yerik
+
+    - [Twitter](https://twitter.com/yerikhar)
+    - [GitHub](https://github.com/YerikAH)
+    - [Send Me A Message](https://yerikah.github.io/send-me-a-message/dist/)
