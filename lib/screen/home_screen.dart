@@ -10,10 +10,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
+  late TabController _tabController;
   @override
   void initState(){
-
+    super.initState();
+    _tabController = TabController(length: 4, vsync: );
   }
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         bottom: const TabBar(
+          controller: _tabController,
           indicatorColor: ThemeApp.white,
           indicatorWeight: 3.5,
           labelColor: ThemeApp.white,
