@@ -34,7 +34,7 @@ class DataDummy {
     ),
     ChatModel(
       avatar:
-          "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "",
       name: "Susana Zapata Ruiz",
       message: "Dónde estas? Por favor no tardes mucho",
       time: "07:05",
