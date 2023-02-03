@@ -9,12 +9,16 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   @override
   void initState(){
     super.initState();
-    _tabController = TabController(length: 4, vsync: );
+    _tabController = TabController(length: 4, vsync: this);
+  }
+  @override
+  void dispose(){
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
@@ -35,12 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: const Icon(Icons.more_vert_sharp),
           ),
         ],
-        bottom: const TabBar(
+        bottom: TabBar(
           controller: _tabController,
           indicatorColor: ThemeApp.white,
           indicatorWeight: 3.5,
           labelColor: ThemeApp.white,
-          tabs: [
+          tabs: const [
             Tab(
               child: Icon(Icons.group),
             ),
@@ -62,7 +66,16 @@ class _HomeScreenState extends State<HomeScreen> {
         
       ),
 
-      body: SingleChildScrollView(child: Container(),)
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          Text("Comunidad"),
+          Text("Chat page"),
+          Text("Statis"),
+          Text("Calls"),
+        ],
+
+      )
     );
   }
 }
