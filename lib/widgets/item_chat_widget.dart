@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/models/models.dart';
 
+import '../theme/theme_app.dart';
+
 class ItemChatWidget extends StatelessWidget {
   ChatModel data;
   ItemChatWidget({required this.data});
 
   @override
   Widget build(BuildContext context) {
+    final String timeString = data.time.substring(0,2);
+    final int stringToNumber = int.parse(timeString);
+    final String pmOram =stringToNumber > 12 ? "p.m." : "a.m.";
     return ListTile(
       onTap: () {
         // Navigator.push(
@@ -20,7 +25,7 @@ class ItemChatWidget extends StatelessWidget {
         // );
       },
       leading: CircleAvatar(
-        backgroundColor: Colors.black12,
+        backgroundColor: ThemeApp.grayPale,
         backgroundImage: NetworkImage(data.avatar),
         radius: 22,
       ),
@@ -37,7 +42,7 @@ class ItemChatWidget extends StatelessWidget {
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: TextStyle(
-          color: data.isTyping ? Color(0xff10CE5F) : Colors.black54,
+          color: data.isTyping ? ThemeApp.greenPale : ThemeApp.gray,
         ),
       ),
 
@@ -46,24 +51,24 @@ class ItemChatWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            data.time,
+            "${data.time}$pmOram",
             style: const TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.0,
-              color: Colors.black54,
+              color: ThemeApp.gray,
             ),
           ),
           data.countMessage > 0
               ? Container(
                   padding: const EdgeInsets.all(6.0),
                   decoration: const BoxDecoration(
-                    color: Color(0xff10CE5F),
+                    color: ThemeApp.greenPale,
                     shape: BoxShape.circle,
                   ),
                   child: Text(
                     data.countMessage.toString(),
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: ThemeApp.white,
                     ),
                   ),
                 )
