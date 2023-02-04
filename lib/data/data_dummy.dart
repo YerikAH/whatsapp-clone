@@ -38,7 +38,7 @@ class DataDummy {
       name: "Susana Zapata Ruiz",
       message: "Dónde estas? Por favor no tardes mucho",
       time: "07:05",
-      date: "12:07",
+      date: "12/07",
       isTyping: true,
       countMessage: 7,
     ),

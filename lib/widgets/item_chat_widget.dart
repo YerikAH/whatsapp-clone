@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/models/models.dart';
-
+import 'package:whatsapp_clone/screen/screens.dart';
 import '../theme/theme_app.dart';
 
 class ItemChatWidget extends StatelessWidget {
+  
   ChatModel data;
-  ItemChatWidget({required this.data});
-
+  ItemChatWidget({super.key, required this.data});
   @override
   Widget build(BuildContext context) {
     final String timeString = data.time.substring(0,2);
     final int stringToNumber = int.parse(timeString);
-    final String pmOram =stringToNumber > 12 ? "p.m." : "a.m.";
+    final String pmOram =stringToNumber > 12 ? " p.m." : " a.m.";
     return ListTile(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => ChatDetailPage(
-        //       name: data.name,
-        //       image: data.avatar,
-        //     ),
-        //   ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ChatDetailScreen(
+              name: data.name,
+              image: data.avatar,
+            ),
+          ),
+        );
       },
       leading: CircleAvatar(
         backgroundColor: ThemeApp.grayPale,

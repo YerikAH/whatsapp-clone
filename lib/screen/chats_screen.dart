@@ -3,11 +3,7 @@ import 'package:whatsapp_clone/data/data_dummy.dart';
 import 'package:whatsapp_clone/widgets/widgets.dart';
 
 class ChatsScreen extends StatelessWidget {
-   
-
   DataDummy data = DataDummy();
-
-  
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
