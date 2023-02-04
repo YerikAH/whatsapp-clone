@@ -2,42 +2,42 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/models/models.dart';
 
 class ItemChatWidget extends StatelessWidget {
-  ChatModel dataChat;
-  ItemChatWidget({required this.dataChat});
+  ChatModel data;
+  ItemChatWidget({required this.data});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ChatDetailPage(
-              image: dataChat.avatar,
-              name: dataChat.name,
-            ),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => ChatDetailPage(
+        //       name: data.name,
+        //       image: data.avatar,
+        //     ),
+        //   ),
+        // );
       },
       leading: CircleAvatar(
         backgroundColor: Colors.black12,
+        backgroundImage: NetworkImage(data.avatar),
         radius: 22,
-        backgroundImage: NetworkImage(dataChat.avatar),
       ),
 
       title: Text(
-        dataChat.name,
+        data.name,
         style: const TextStyle(
           fontWeight: FontWeight.w500,
         ),
       ),
 
       subtitle: Text(
-        dataChat.isTyping ? "typing..." : dataChat.message,
+        data.isTyping ? "typing..." : data.message,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: TextStyle(
-          color: dataChat.isTyping ? Color(0xff10CE5F) : Colors.black54,
+          color: data.isTyping ? Color(0xff10CE5F) : Colors.black54,
         ),
       ),
 
@@ -46,14 +46,14 @@ class ItemChatWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            dataChat.time,
+            data.time,
             style: const TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.0,
               color: Colors.black54,
             ),
           ),
-          dataChat.countMessage > 0
+          data.countMessage > 0
               ? Container(
                   padding: const EdgeInsets.all(6.0),
                   decoration: const BoxDecoration(
@@ -61,7 +61,7 @@ class ItemChatWidget extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                   child: Text(
-                    dataChat.countMessage.toString(),
+                    data.countMessage.toString(),
                     style: const TextStyle(
                       color: Colors.white,
                     ),

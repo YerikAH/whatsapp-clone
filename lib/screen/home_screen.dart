@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screen/chats_screen.dart';
 import 'package:whatsapp_clone/theme/theme_app.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -63,14 +64,14 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         child: const Icon(Icons.message, color: ThemeApp.white,),
-        
+        backgroundColor: ThemeApp.greenPale,
       ),
 
       body: TabBarView(
         controller: _tabController,
         children: [
-          Text("Comunidad"),
-          Text("Chat page"),
+          Text("Comunity"),
+          ChatsScreen(),
           Text("Statis"),
           Text("Calls"),
         ],
