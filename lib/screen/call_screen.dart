@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/data/data_dummy.dart';
 import 'package:whatsapp_clone/widgets/widgets.dart';
 
 import '../theme/theme_app.dart';
 
 class CallScreen extends StatelessWidget {
-  const CallScreen({Key? key}) : super(key: key);
+  DataDummy data = DataDummy();
+  CallScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
-    final data = ["papa","papa","papa","papa","papa","papa","papa","papa"];
+    final dataCalls = data.callsAns;
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,22 +26,27 @@ class CallScreen extends StatelessWidget {
                 style:
                     TextStyle(fontWeight: FontWeight.w600, color: ThemeApp.gray)),
           ),
-          ...data.map((e) => ListTile(
-            
-              title: const Text("Juan"),
+          ...dataCalls.map((e){ 
+            DateTime now = DateTime.now();
+            int day = now.day;
+            int month = now.month;
+            final xx = "";
+            return ListTile(
+              title: Text(e.name),
               subtitle: Row(
                 children: const [
                   Icon(Icons.input),
                   Text("Hace 17 minutos")
                 ],
               ),
-              leading: const CircleAvatar(
+              leading: CircleAvatar(
                 radius: 25.0,
-                backgroundImage: NetworkImage("https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                backgroundImage: NetworkImage(e.avatar),
               ),
               trailing: IconButton(onPressed: (){}, icon: Icon(Icons.call, size: 25.0,color: ThemeApp.green,)),
               onTap: (){},
-            )
+            );
+          }
           )
         ],
       ),

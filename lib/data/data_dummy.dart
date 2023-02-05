@@ -1,6 +1,18 @@
+import 'package:whatsapp_clone/models/call_model.dart';
 import 'package:whatsapp_clone/models/models.dart';
 
 class DataDummy {
+  final callsAns = [
+    CallModel("Mamá", 1, 0, 3, false,
+        "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg","15:00"),
+    CallModel("Mamá", 2, 0, 0, true,
+        "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg","15:48"),
+    CallModel("Mamá", 1, 1, 0, true,
+        "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg","12:00"),
+    CallModel("Mamá", 4, 1, 0, true,
+        "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg","16:00"),
+  ];
+
   Map<String, List<MessageModel>> personMessages = {
     'Mamá': [
       MessageModel(
@@ -158,16 +170,4 @@ class DataDummy {
     var chatModels = getChatModels();
     chats = chatModels;
   }
-
-  final calls = [
-    {
-      "name": "Jose Daniel",
-      "lastCallDay": 5,
-      "lastCallMounth": 0,
-      "countCalls": 1,
-      "answer": true,
-    }
-
-
-  ]
 }

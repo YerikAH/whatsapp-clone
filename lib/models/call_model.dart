@@ -5,6 +5,7 @@ class CallModel {
   final int countCalls;
   final bool answer;
   final String avatar;
+  final String time;
 
   CallModel(
   this.name, 
@@ -12,6 +13,6 @@ class CallModel {
   this.lastCallMounth, 
   this.countCalls,
   this.answer, 
-  this.avatar
+  this.avatar, this.time
   );
 }
