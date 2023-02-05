@@ -6,6 +6,7 @@ import '../theme/theme_app.dart';
 class ItemChatWidget extends StatelessWidget {
   
   ChatModel data;
+  
   ItemChatWidget({super.key, required this.data});
   @override
   Widget build(BuildContext context) {

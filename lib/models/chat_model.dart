@@ -1,7 +1,7 @@
 class ChatModel {
   String avatar;
   String name;
-  String message;
+  final message;
   String time;
   String date;
   bool isTyping;
@@ -10,7 +10,7 @@ class ChatModel {
   ChatModel({
     required this.avatar,
     required this.name,
-    required this.message,
+    this.message,
     required this.time,
     required this.date,
     required this.isTyping,
