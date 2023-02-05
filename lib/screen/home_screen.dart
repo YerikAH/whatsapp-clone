@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screen/chats_screen.dart';
-import 'package:whatsapp_clone/screen/group_screen.dart';
+import 'package:whatsapp_clone/screen/screens.dart';
 import 'package:whatsapp_clone/theme/theme_app.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -74,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           const GroupScreen(),
           ChatsScreen(),
           Text("Statis"),
-          Text("Calls"),
+          CallScreen()
         ],
 
       )
