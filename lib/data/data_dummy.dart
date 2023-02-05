@@ -20,7 +20,7 @@ class DataDummy {
         answer: true,
         avatar:
             "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg",
-        time: "16:00"),
+        time: "08:24"),
     CallModel(
         name: "Mamá",
         lastCallDay: 2,

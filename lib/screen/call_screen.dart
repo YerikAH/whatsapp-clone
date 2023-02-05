@@ -51,6 +51,10 @@ class CallScreen extends StatelessWidget {
             int month = now.month;
             String dayFinal;
             String monthFinal = getMonthName(e.lastCallMounth);
+            final String timeString = e.time.substring(0,2);
+            final int stringToNumber = int.parse(timeString);
+            final String pmOram =stringToNumber > 12 ? " p.m." : " a.m.";
+            String count = e.countCalls >= 2 ? "(${e.countCalls})" : ""; 
             if(day == e.lastCallDay){
               dayFinal = "Hoy";
               monthFinal = "";
@@ -58,22 +62,26 @@ class CallScreen extends StatelessWidget {
               dayFinal = "Ayer";
               monthFinal = "";
             }else{
-              dayFinal = "$day";
+              dayFinal = "$day de";
             }
 
             return ListTile(
               title: Text(e.name),
               subtitle: Row(
                 children: [
-                  Icon(Icons.input),
-                  Text("$dayFinal $monthFinal ${e.time}")
+                  Transform(
+                    alignment: Alignment.center,
+                    transform: e.answer ?  Matrix4.rotationZ(-0.7) : Matrix4.rotationZ(2.3),
+                    child: Icon(Icons.arrow_forward, color: e.answer ? ThemeApp.greenPale : ThemeApp.red,)
+                  ),
+                  Text("$count $dayFinal $monthFinal ${e.time} $pmOram",overflow: TextOverflow.ellipsis,)
                 ],
               ),
               leading: CircleAvatar(
-                radius: 25.0,
+                radius: 20.0,
                 backgroundImage: NetworkImage(e.avatar),
               ),
-              trailing: IconButton(onPressed: (){}, icon: Icon(Icons.call, size: 25.0,color: ThemeApp.green,)),
+              trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.call, size: 25.0,color: ThemeApp.green,)),
               onTap: (){},
             );
           }

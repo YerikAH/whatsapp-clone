@@ -13,7 +13,7 @@ class LinkWidget extends StatelessWidget {
       title: const Text("Crear enlace de llamada", style: TextStyle(fontWeight: FontWeight.w600, color: ThemeApp.black),),
       subtitle: const Text("Comparte un enlace para tu llamada de WhatsApp"),
       leading: Transform(
-        alignment: Alignment.center, //origin: Offset(100, 100)
+        alignment: Alignment.center,
         transform: Matrix4.rotationZ(-0.7),
         child: Container(
           width: 50.0,
