@@ -6,15 +6,20 @@ class GroupScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    final String titleGroup = "Introducing the Communities feature";
-    final String textGroup = "Easily organize your related groups and send notices. Now your communities, like neighborhoods and schools, can have their own space.";
+    const String titleGroup = "Introducing the Communities feature";
+    const String textGroup = "Easily organize your related groups and send notices. Now your communities, like neighborhoods and schools, can have their own space.";
 
 
     final imageComunity = Container(
+      height: 250.0,
+      width: 250.0,
+
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/comunity.png")
-        )
+          image: AssetImage("assets/comunity.png"),
+          fit: BoxFit.cover
+        ),
+        
       ),
 
 
@@ -22,15 +27,25 @@ class GroupScreen extends StatelessWidget {
 
 
 
-    return Column(
-      children: [
-        imageComunity,
-        Text("", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700),),
-        Text("")
-
-      ],
-
-
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          imageComunity,
+    
+          const Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 25.0),
+            child:  Text(titleGroup, style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700), textAlign: TextAlign.center,),
+          ),
+          const SizedBox(height: 20.0,),
+          const Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 35.0),
+            child: Text(textGroup, textAlign: TextAlign.center,style: TextStyle(height: 1.5),),
+          )
+    
+        ],
+    
+    
+      ),
     );
   }
 }
