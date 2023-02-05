@@ -49,11 +49,11 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
                     color: messagesList[index].type == "me"
                         ? const Color(0xffE7FFDC)
                         : Colors.white,
-                    borderRadius: const BorderRadius.only(
+                    borderRadius:  BorderRadius.only(
                       bottomLeft: Radius.circular(10),
                       bottomRight: Radius.circular(10),
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(0),
+                      topLeft: messagesList[index].type == "me" ? Radius.circular(10) : Radius.circular(0),
+                      topRight: messagesList[index].type == "me" ? Radius.circular(0) : Radius.circular(10),
                     ),
                   ),
                   child: Stack(
@@ -68,8 +68,14 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
                           crossAxisAlignment: CrossAxisAlignment.baseline,
                           textBaseline: TextBaseline.alphabetic,
                           children: [
-                            Text(
-                              messagesList[index].message,
+                            ConstrainedBox(
+                              constraints: const BoxConstraints(maxWidth: 175.0),
+                              child: Text(
+                                messagesList[index].message,
+                                maxLines: 4,
+                                overflow: TextOverflow.ellipsis,
+          
+                              ),
                             ),
                             const SizedBox(
                               width: 50.0,

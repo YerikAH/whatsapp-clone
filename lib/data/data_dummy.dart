@@ -1,6 +1,7 @@
 import 'package:whatsapp_clone/models/models.dart';
 
 class DataDummy {
+  
   List<ChatModel> chats = [
     ChatModel(
       avatar:
@@ -44,49 +45,33 @@ class DataDummy {
     ),
   ];
 
-  List<MessageModel> messages = [
-    MessageModel(
-      message: "Hola",
-      type: "other",
-      time: "10:30",
-    ),
-    MessageModel(
-      message: "Hola, Cómo estas?",
-      type: "me",
-      time: "10:31",
-    ),
-    MessageModel(
-      message: "Estás estudiando Kotlin?",
-      type: "me",
-      time: "10:32",
-    ),
-    MessageModel(
-      message: "Si, ahora estoy estudiando",
-      type: "other",
-      time: "10:32",
-    ),
-  ];
 
   Map<String, List<MessageModel>> personMessages = {
     'Mamá': [
       MessageModel(
-        message: "Hola",
+        message: "Hijooooo",
         type: "other",
         time: "10:30",
       ),
+
       MessageModel(
-        message: "Hola, Cómo estas?",
+        message: "¿Que estas haciendo?",
+        type: "me",
+        time: "10:31",
+      ),
+            MessageModel(
+        message: "Estaba un rato estudiando maaaa",
         type: "me",
         time: "10:31",
       ),
       MessageModel(
-        message: "Estás estudiando Kotlin?",
-        type: "me",
+        message: "Ya hijoo, ya vengo",
+        type: "other",
         time: "10:32",
       ),
-      MessageModel(
-        message: "Si, ahora estoy estudiando",
-        type: "other",
+                  MessageModel(
+        message: "Ya maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        type: "me",
         time: "10:32",
       ),
     ],
@@ -99,61 +84,71 @@ class DataDummy {
       MessageModel(
         message: "Hola, Cómo estas?",
         type: "me",
-        time: "10:31",
+        time: "11:31",
       ),
-      MessageModel(
-        message: "Estás estudiando Kotlin?",
-        type: "me",
-        time: "10:32",
-      ),
-      MessageModel(
-        message: "Si, ahora estoy estudiando",
+            MessageModel(
+        message: "Estoy bien",
         type: "other",
-        time: "10:32",
+        time: "15:00",
+      ),
+      MessageModel(
+        message: "Estás estudiando TypeScript?",
+        type: "me",
+        time: "15:32",
+      ),
+      MessageModel(
+        message: "Si, pronto ire a por Rust",
+        type: "other",
+        time: "15:33",
+      ),
+            MessageModel(
+        message: "Woowwwww",
+        type: "me",
+        time: "15:35",
       ),
     ],
     'Nelson': [
       MessageModel(
         message: "Hola",
-        type: "other",
-        time: "10:30",
-      ),
-      MessageModel(
-        message: "Hola, Cómo estas?",
         type: "me",
-        time: "10:31",
-      ),
-      MessageModel(
-        message: "Estás estudiando Kotlin?",
-        type: "me",
-        time: "10:32",
-      ),
-      MessageModel(
-        message: "Si, ahora estoy estudiando",
-        type: "other",
-        time: "10:32",
+        time: "17:09",
       ),
     ],
     'Susana Zapata Ruiz': [
       MessageModel(
         message: "Hola",
         type: "other",
-        time: "10:30",
+        time: "8:05",
       ),
       MessageModel(
-        message: "Hola, Cómo estas?",
-        type: "me",
-        time: "10:31",
-      ),
-      MessageModel(
-        message: "Estás estudiando Kotlin?",
-        type: "me",
-        time: "10:32",
-      ),
-      MessageModel(
-        message: "Si, ahora estoy estudiando",
+        message: "Holaaaaaa",
         type: "other",
-        time: "10:32",
+        time: "8:05",
+      ),
+      MessageModel(
+        message:"Holaaaaaaaaaaaaaaaaaaaaaaaaa",
+        type: "other",
+        time: "8:05",
+      ),
+      MessageModel(
+        message: "puedes pasarme los apuntes de Python?",
+        type: "other",
+        time: "8:06",
+      ),
+            MessageModel(
+        message: "acerca de IA",
+        type: "other",
+        time: "8:06",
+      ),
+      MessageModel(
+        message: "Porfavor, lo envías",
+        type: "other",
+        time: "8:06",
+      ),
+      MessageModel(
+        message: "Tambien la de POO con Java.",
+        type: "other",
+        time: "8:07",
       ),
     ],
   };
