@@ -8,6 +8,7 @@ class ThemeApp{
   static const Color grayPale = Color(0xffe0e0e0);
   static const Color grayYellow = Color(0xffE9E1D8);
   static const Color sky = Color(0xff53BDEB);
+  static const Color graySemiPale = Colors.black45;
   static final ThemeData configTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: white,
     appBarTheme:  const AppBarTheme(

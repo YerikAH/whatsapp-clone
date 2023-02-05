@@ -66,4 +66,99 @@ class DataDummy {
       time: "10:32",
     ),
   ];
+
+  Map<String, List<MessageModel>> personMessages = {
+    'Mamá':[
+      MessageModel(
+	message: "Hola",
+	type: "other",
+        time: "10:30",
+      ),
+      MessageModel(
+        message: "Hola, Cómo estas?",
+        type: "me",
+        time: "10:31",
+      ),
+      MessageModel(
+        message: "Estás estudiando Kotlin?",
+        type: "me",
+	time: "10:32",
+      ),
+      MessageModel(
+	message: "Si, ahora estoy estudiando",
+	type: "other",
+	time: "10:32",
+      ),     
+    ],
+
+    'Josue Torres':[
+      MessageModel(
+	message: "Hola",
+	type: "other",
+        time: "10:30",
+      ),
+      MessageModel(
+        message: "Hola, Cómo estas?",
+        type: "me",
+        time: "10:31",
+      ),
+      MessageModel(
+        message: "Estás estudiando Kotlin?",
+        type: "me",
+	time: "10:32",
+      ),
+      MessageModel(
+	message: "Si, ahora estoy estudiando",
+	type: "other",
+	time: "10:32",
+      ),     
+    ],
+
+    'Nelson':[
+      MessageModel(
+	message: "Hola",
+	type: "other",
+        time: "10:30",
+      ),
+      MessageModel(
+        message: "Hola, Cómo estas?",
+        type: "me",
+        time: "10:31",
+      ),
+      MessageModel(
+        message: "Estás estudiando Kotlin?",
+        type: "me",
+	time: "10:32",
+      ),
+      MessageModel(
+	message: "Si, ahora estoy estudiando",
+	type: "other",
+	time: "10:32",
+      ),     
+    ],
+
+    'Susana Zapata Ruiz':[
+      MessageModel(
+	message: "Hola",
+	type: "other",
+        time: "10:30",
+      ),
+      MessageModel(
+        message: "Hola, Cómo estas?",
+        type: "me",
+        time: "10:31",
+      ),
+      MessageModel(
+        message: "Estás estudiando Kotlin?",
+        type: "me",
+	time: "10:32",
+      ),
+      MessageModel(
+	message: "Si, ahora estoy estudiando",
+	type: "other",
+	time: "10:32",
+      ),     
+    ],
+  };
+
 }

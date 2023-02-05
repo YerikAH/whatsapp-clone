@@ -18,9 +18,7 @@ class ChatDetailScreen extends StatefulWidget {
 }
 
 class _ChatDetailScreen extends State<ChatDetailScreen> {
-  DataDummy mandarina = DataDummy();
-
-
+  DataDummy data = DataDummy();
   bool isTyping = false;
   @override
   Widget build(BuildContext context) {
@@ -33,17 +31,16 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
         clipBehavior: Clip.none,
         children: [
           ListView.builder(
-            itemCount: mandarina.messages.length,
+            itemCount: data.messages.length,
             itemBuilder: (BuildContext context, int index) {
-              // print(mandarina.messages[index].type);
               return Align(
-                alignment: mandarina.messages[index].type == "me"
+                alignment: data.messages[index].type == "me"
                     ? Alignment.centerRight
                     : Alignment.centerLeft,
                 child: Container(
                   margin: const EdgeInsets.all(6.0),
                   decoration: BoxDecoration(
-                    color: mandarina.messages[index].type == "me"
+                    color: data.messages[index].type == "me"
                         ? const Color(0xffE7FFDC)
                         : Colors.white,
                     borderRadius: const BorderRadius.only(
@@ -66,7 +63,7 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
                           textBaseline: TextBaseline.alphabetic,
                           children: [
                             Text(
-                              mandarina.messages[index].message,
+                              data.messages[index].message,
                             ),
                             const SizedBox(
                               width: 50.0,
@@ -80,10 +77,10 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
                         child: Row(
                           children: [
                             Text(
-                              mandarina.messages[index].time,
+                              data.messages[index].time,
                               style: const TextStyle(
                                 fontSize: 12.0,
-                                color: Colors.black45,
+                                color: ThemeApp.graySemiPale,
                               ),
                             ),
                             const SizedBox(
@@ -180,7 +177,7 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
                       child: Icon(
                         isTyping ? Icons.send : Icons.mic,
                         size: 28.0,
-                        color: Colors.white,
+                        color: ThemeApp.white,
                       ),
                     ),
                   ),
@@ -206,8 +203,8 @@ class _appBarChat extends StatelessWidget with PreferredSizeWidget{
   }) : super(key: key);
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
-  
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
