@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/theme_app.dart';
+
 class GroupScreen extends StatelessWidget {
 
   const GroupScreen({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class GroupScreen extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/comunity.png"),
-          fit: BoxFit.cover
+          fit: BoxFit.contain
         ),
         
       ),
@@ -34,12 +36,12 @@ class GroupScreen extends StatelessWidget {
     
           const Padding(
             padding:  EdgeInsets.symmetric(horizontal: 25.0),
-            child:  Text(titleGroup, style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700), textAlign: TextAlign.center,),
+            child:  Text(titleGroup, style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700, color:ThemeApp.black ), textAlign: TextAlign.center, ),
           ),
           const SizedBox(height: 20.0,),
           const Padding(
             padding:  EdgeInsets.symmetric(horizontal: 35.0),
-            child: Text(textGroup, textAlign: TextAlign.center,style: TextStyle(height: 1.5),),
+            child: Text(textGroup, textAlign: TextAlign.center,style: TextStyle(height: 1.5,color:ThemeApp.gray),),
           )
     
         ],
