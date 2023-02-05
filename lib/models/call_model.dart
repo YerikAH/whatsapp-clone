@@ -8,11 +8,11 @@ class CallModel {
   final String time;
 
   CallModel(
-  this.name, 
-  this.lastCallDay, 
-  this.lastCallMounth, 
-  this.countCalls,
-  this.answer, 
-  this.avatar, this.time
-  );
+      {required this.name,
+      required this.lastCallDay,
+      required this.lastCallMounth,
+      required this.countCalls,
+      required this.answer,
+      required this.avatar,
+      required this.time});
 }

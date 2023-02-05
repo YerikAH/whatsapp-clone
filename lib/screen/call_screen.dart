@@ -6,6 +6,25 @@ import '../theme/theme_app.dart';
 
 class CallScreen extends StatelessWidget {
   DataDummy data = DataDummy();
+  String getMonthName(int monthNum) {
+    List<String> months = [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+    ];
+    return months[monthNum];
+  }
+
+
   CallScreen({Key? key}) : super(key: key);
 
   @override
@@ -30,13 +49,24 @@ class CallScreen extends StatelessWidget {
             DateTime now = DateTime.now();
             int day = now.day;
             int month = now.month;
-            final xx = "";
+            String dayFinal;
+            String monthFinal = getMonthName(e.lastCallMounth);
+            if(day == e.lastCallDay){
+              dayFinal = "Hoy";
+              monthFinal = "";
+            }else if((day - 1 )== e.lastCallDay){
+              dayFinal = "Ayer";
+              monthFinal = "";
+            }else{
+              dayFinal = "$day";
+            }
+
             return ListTile(
               title: Text(e.name),
               subtitle: Row(
-                children: const [
+                children: [
                   Icon(Icons.input),
-                  Text("Hace 17 minutos")
+                  Text("$dayFinal $monthFinal ${e.time}")
                 ],
               ),
               leading: CircleAvatar(
