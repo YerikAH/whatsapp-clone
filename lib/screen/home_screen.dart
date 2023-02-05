@@ -64,8 +64,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
-        child: const Icon(Icons.message, color: ThemeApp.white,),
         backgroundColor: ThemeApp.greenPale,
+        child: const Icon(Icons.message, color: ThemeApp.white,),
       ),
 
       body: TabBarView(
