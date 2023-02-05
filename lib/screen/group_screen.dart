@@ -18,7 +18,7 @@ class GroupScreen extends StatelessWidget {
 
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/comunity.png"),
+          image: AssetImage("assets/comunity-2.png"),
           fit: BoxFit.contain
         ),
         
