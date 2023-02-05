@@ -2,6 +2,7 @@ import 'package:whatsapp_clone/data/data_dummy.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../models/message_model.dart';
 import '../theme/theme_app.dart';
 
 class ChatDetailScreen extends StatefulWidget {
@@ -20,10 +21,15 @@ class ChatDetailScreen extends StatefulWidget {
 class _ChatDetailScreen extends State<ChatDetailScreen> {
   DataDummy data = DataDummy();
   bool isTyping = false;
+
   @override
   Widget build(BuildContext context) {
     final String name = widget.name;  
     final String imagen = widget.image;
+    final List<MessageModel> messagesList =  data.personMessages[widget.name] as List<MessageModel>;
+    
+   print(messagesList.length);
+
     return Scaffold(
       backgroundColor: ThemeApp.grayYellow,
       appBar: _appBarChat(name: name, image: imagen),
@@ -31,16 +37,16 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
         clipBehavior: Clip.none,
         children: [
           ListView.builder(
-            itemCount: data.messages.length,
+            itemCount: messagesList.length,
             itemBuilder: (BuildContext context, int index) {
               return Align(
-                alignment: data.messages[index].type == "me"
+                alignment: messagesList[index].type == "me"
                     ? Alignment.centerRight
                     : Alignment.centerLeft,
                 child: Container(
                   margin: const EdgeInsets.all(6.0),
                   decoration: BoxDecoration(
-                    color: data.messages[index].type == "me"
+                    color: messagesList[index].type == "me"
                         ? const Color(0xffE7FFDC)
                         : Colors.white,
                     borderRadius: const BorderRadius.only(
@@ -63,7 +69,7 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
                           textBaseline: TextBaseline.alphabetic,
                           children: [
                             Text(
-                              data.messages[index].message,
+                              messagesList[index].message,
                             ),
                             const SizedBox(
                               width: 50.0,
@@ -77,7 +83,7 @@ class _ChatDetailScreen extends State<ChatDetailScreen> {
                         child: Row(
                           children: [
                             Text(
-                              data.messages[index].time,
+                              messagesList[index].time,
                               style: const TextStyle(
                                 fontSize: 12.0,
                                 color: ThemeApp.graySemiPale,
