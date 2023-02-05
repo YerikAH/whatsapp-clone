@@ -26,7 +26,7 @@ class CallScreen extends StatelessWidget {
           ),
           ...data.map((e) => ListTile(
             
-              title: Text("Juan"),
+              title: const Text("Juan"),
               subtitle: Row(
                 children: const [
                   Icon(Icons.input),

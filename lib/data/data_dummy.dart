@@ -158,4 +158,16 @@ class DataDummy {
     var chatModels = getChatModels();
     chats = chatModels;
   }
+
+  final calls = [
+    {
+      "name": "Jose Daniel",
+      "lastCallDay": 5,
+      "lastCallMounth": 0,
+      "countCalls": 1,
+      "answer": true,
+    }
+
+
+  ]
 }
