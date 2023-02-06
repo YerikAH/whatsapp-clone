@@ -39,7 +39,7 @@ class CallScreen extends StatelessWidget {
           const LinkWidget(),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-            child: Text("Recientes",
+            child: Text("Recent",
                 style: TextStyle(
                     fontWeight: FontWeight.w600, color: ThemeApp.gray)),
           ),
@@ -54,13 +54,13 @@ class CallScreen extends StatelessWidget {
             final String pmOram = stringToNumber > 12 ? " p.m." : " a.m.";
             String count = e.countCalls >= 2 ? "(${e.countCalls})" : "";
             if (day == e.lastCallDay) {
-              dayFinal = "Hoy";
+              dayFinal = "Today";
               monthFinal = "";
             } else if ((day - 1) == e.lastCallDay) {
-              dayFinal = "Ayer";
+              dayFinal = "Yesterday";
               monthFinal = "";
             } else {
-              dayFinal = "$day de";
+              dayFinal = "$day of";
             }
 
             return ListTile(

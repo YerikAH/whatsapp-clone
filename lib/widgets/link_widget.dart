@@ -10,8 +10,8 @@ class LinkWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: (){},
-      title: const Text("Crear enlace de llamada", style: TextStyle(fontWeight: FontWeight.w600, color: ThemeApp.black),),
-      subtitle: const Text("Comparte un enlace para tu llamada de WhatsApp"),
+      title: const Text("Create call link", style: TextStyle(fontWeight: FontWeight.w600, color: ThemeApp.black),),
+      subtitle: const Text("Share a link for your WhatsApp call."),
       leading: Transform(
         alignment: Alignment.center,
         transform: Matrix4.rotationZ(-0.7),

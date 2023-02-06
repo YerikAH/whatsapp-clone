@@ -4,7 +4,7 @@ import 'package:whatsapp_clone/models/models.dart';
 class DataDummy {
   final callsAns = [
     CallModel(
-        name: "Mamá",
+        name: "Brother",
         lastCallDay: 5,
         lastCallMounth: 1,
         countCalls: 1,
@@ -13,7 +13,7 @@ class DataDummy {
             "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg",
         time: "16:00"),
     CallModel(
-        name: "Mamá",
+        name: "Brother",
         lastCallDay: 4,
         lastCallMounth: 1,
         countCalls: 1,
@@ -22,7 +22,7 @@ class DataDummy {
             "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg",
         time: "08:24"),
     CallModel(
-        name: "Mamá",
+        name: "Brother",
         lastCallDay: 2,
         lastCallMounth: 0,
         countCalls: 2,
@@ -33,56 +33,56 @@ class DataDummy {
   ];
 
   Map<String, List<MessageModel>> personMessages = {
-    'Mamá': [
+    'Brother': [
       MessageModel(
-        message: "Hijooooo",
+        message: "Hello",
         type: "other",
         time: "10:30",
       ),
       MessageModel(
-        message: "¿Que estas haciendo?",
+        message: "Hi",
         type: "me",
         time: "10:31",
       ),
       MessageModel(
-        message: "Estaba un rato estudiando maaaa",
+        message: "today is your turn to cook",
         type: "me",
         time: "10:31",
       ),
       MessageModel(
-        message: "Ya hijoo, ya vengo",
+        message: "yes, I'll cook soup",
         type: "other",
         time: "10:32",
       ),
       MessageModel(
-        message: "Ya maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        message: "mmmmm",
         type: "me",
         time: "10:32",
       ),
     ],
     'Josue Torres': [
       MessageModel(
-        message: "Hola",
+        message: "Hi",
         type: "other",
         time: "10:30",
       ),
       MessageModel(
-        message: "Hola, Cómo estas?",
+        message: "Hello, How are you?",
         type: "me",
         time: "11:31",
       ),
       MessageModel(
-        message: "Estoy bien",
+        message: "I'm fine",
         type: "other",
         time: "15:00",
       ),
       MessageModel(
-        message: "Estás estudiando TypeScript?",
+        message: "Are you study TypeScript?",
         type: "me",
         time: "15:32",
       ),
       MessageModel(
-        message: "Si, pronto ire a por Rust",
+        message: "Yess, soon i come by Rust",
         type: "other",
         time: "15:33",
       ),
@@ -94,44 +94,44 @@ class DataDummy {
     ],
     'Nelson': [
       MessageModel(
-        message: "Hola",
+        message: "Hello",
         type: "me",
         time: "17:09",
       ),
     ],
     'Susana Zapata Ruiz': [
       MessageModel(
-        message: "Hola",
+        message: "Hellooo",
         type: "other",
         time: "8:05",
       ),
       MessageModel(
-        message: "Holaaaaaa",
+        message: "Hellooooooooooo",
         type: "other",
         time: "8:05",
       ),
       MessageModel(
-        message: "Holaaaaaaaaaaaaaaaaaaaaaaaaa",
+        message: "Helloooooooooooooooooooo",
         type: "other",
         time: "8:05",
       ),
       MessageModel(
-        message: "puedes pasarme los apuntes de Python?",
+        message: "can you pass me the python notes?",
         type: "other",
         time: "8:06",
       ),
       MessageModel(
-        message: "acerca de IA",
+        message: "about of AI",
         type: "other",
         time: "8:06",
       ),
       MessageModel(
-        message: "Porfavor, lo envías",
+        message: "Please, send it",
         type: "other",
         time: "8:06",
       ),
       MessageModel(
-        message: "Tambien la de POO con Java.",
+        message: "Also the OOP with Java.",
         type: "other",
         time: "8:07",
       ),
@@ -143,8 +143,8 @@ class DataDummy {
       ChatModel(
         avatar:
             "https://i.pinimg.com/280x280_RS/42/03/a5/4203a57a78f6f1b1cc8ce5750f614656.jpg",
-        name: "Mamá",
-        message: personMessages["Mamá"]?.last.message,
+        name: "Brother",
+        message: personMessages["Brother"]?.last.message,
         time: "12:40",
         date: "12/12",
         isTyping: false,
